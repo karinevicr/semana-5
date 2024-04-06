@@ -221,6 +221,34 @@ Chamando o Método para Ver o Total:
 
 Dica: Utilize console.log() para exibir as informações!
 
+````
+
+class SomadorDeNotas {
+
+    constructor() {
+      this.total = 0;
+    };
+  
+    adicionarNota(nota) {
+      this.total += nota;
+    };
+  
+    verSoma() {
+      console.log("A soma de nota é ${this.total}");
+    };
+  };
+  
+
+  var somar = new SomadorDeNotas();
+  
+  somar.adicionarNota(10);
+  somar.adicionarNota(9);
+  somar.adicionarNota(8);
+  
+  somar.verSoma();
+
+````
+
 
 ______
 
