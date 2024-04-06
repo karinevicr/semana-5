@@ -270,3 +270,42 @@ Agora, sua tarefa é escrever um código em JavaScript que crie as classes Funci
 - Para cada objeto, chame o método calcularSalario() e mostre o salário calculado no console.
 
 Certifique-se de explicar cada parte do código utilizando comentários, explicando para que serve cada atributo e método, bem como a lógica por trás do cálculo de salário para o tipo de funcionário Professor.
+
+````
+// Criação classe Funcionario
+class Funcionario {
+    constructor(nome, idade, salarioBase) {
+      this.nome = nome; 
+      this.idade = idade; 
+      this.salarioBase = salarioBase; 
+    };
+  
+    calcularSalario() { // aqui é o metodo para calcular salario
+      return this.salarioBase;
+    }
+  }
+  
+  // Definição da classe Professor, que herda de Funcionario
+  class Professora extends Funcionario {
+    constructor(nome, idade, salarioBase, disciplina, horasAulaPorSemana, valorHoraAula) {
+      super(nome, idade, salarioBase); // chama o construtor da class funcionario
+      this.disciplina = disciplina;  // disclina que o ´professor é responsavel
+      this.horasAulaPorSemana = horasAulaPorSemana; // quantidade de horas dadas por semana
+      this.valorHoraAula = valorHoraAula; // valor da hora aula
+    };
+  
+    calcularSalario() {
+      var SemanasPorMes = 4;
+      var salarioBase = 10000;
+      return this.horasAulaPorSemana * this.valorHoraAula * SemanasPorMes + salarioBase // faz o calculo do valor do salario
+    };
+  };
+  
+  // Criando dois objetos do tipo Professor com informações fictícias
+  var professora1 = new Professora("Bruna", 22, 10000, "UX Design", 10, 200); 
+  var professora2 = new Professora("Kizzy", 22, 10000, "Programação", 10, 200);
+  // Calculando e exibindo o salário de cada professor
+  console.log(`${professora1.nome} recebe R$ ${professora1.calcularSalario()} por mês.`);
+  console.log(`${professora2.nome} recebe R$ ${professora2.calcularSalario()} por mês.`);
+
+````
