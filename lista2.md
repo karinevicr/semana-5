@@ -95,7 +95,7 @@ ______
 
 Qual será a saída do código acima?
 
-XKO) "Olá, meu nome é João. Olá, meu nome é Maria."
+X) "Olá, meu nome é João. Olá, meu nome é Maria."
 
 B) "Olá, meu nome é ."
 
@@ -119,6 +119,26 @@ Criando e manipulando Animais:
 - Para cada animal, chame o método descrever() para ver a descrição no console.
 
 Dica: Utilize `console.log()` para exibir as informações!
+
+````
+class animal {
+    constructor(nome, idade) {
+      this.nome = nome;
+      this.idade = idade;
+    };
+  
+    descrever() {
+      console.log(`Esse animal se chama ${this.nome} e ele possui ${this.idade} anos de idade.`);
+    };
+  };
+  
+  var cachorro = new animal("cachorrinho", 9);
+  var gato = new animal("gatinho", 6);
+  
+  cachorro.descrever();
+  gato.descrever();
+
+````
 
 ______
 
